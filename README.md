@@ -17,9 +17,9 @@ Original scripts to elucidate drug modes of action by identifying transcription 
     
     Fold enrichment values were returned at the same time.
 
-    These procedure were performed across hundreds of chemicals using ```insilicoChIP``` command, the core of which is CLI-based ChIPEA.
+    These procedure were performed across hundreds of chemicals using local ```insilicoChIP``` command, the core of which is CLI-based ChIPEA.
     
-    * Note that GUI-based and API-based ChIPEA are also provided on the website of ChIP-Atlas (https://chip-atlas.org/enrichment_analysis).
+    * Note that GUI-based and API-based ChIPEA are **available for public** on the website of ChIP-Atlas (https://chip-atlas.org/enrichment_analysis).
     
       * Submission form of ChIPEA on website. 
       ![图片 1](https://user-images.githubusercontent.com/74224230/135547550-c3b0eb2c-1685-4af6-a8a0-a940e36e60bb.png)
