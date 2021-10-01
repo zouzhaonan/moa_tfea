@@ -6,10 +6,10 @@ Zhaonan Zou (Department of Drug Discovery Medicine, Kyoto University Graduate Sc
 
 # 1. Performance of ChIPEA 
 
-1) ```Chemical_Gene_list.sh``` ```Genelist_process_for_TFEA.sh```
+1) ```CTD_Chemical_Gene_list.sh``` ```CTD_Genelist_process_for_ChIPEA.sh```
     
     Extraction of the gene symbols of up- and down-regulated genes induced by a query chemical (from CTD).
-2) ```TFEA.sh```
+2) ```CTD_ChIPEA.sh```
     
     ChIPEA with up- and down-regulated genes extracted in 1) as input.
     
