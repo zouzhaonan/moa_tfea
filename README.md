@@ -1,4 +1,4 @@
-# moa_tfea
+# Main
 Original scripts to elucidate drug modes of action by identifying transcription factors that organize the expression of chemically induced genes using large-scale ChIP-seq data.
 
 ## 1. Performance of ChIPEA 
