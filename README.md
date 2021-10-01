@@ -1,10 +1,7 @@
-# Contents
+# moa_tfea
 Original scripts to elucidate drug modes of action by identifying transcription factors that organize the expression of chemically induced genes using large-scale ChIP-seq data.
 
-# Author
-Zhaonan Zou (Department of Drug Discovery Medicine, Kyoto University Graduate School of Medicine, JAPAN)
-
-# 1. Performance of ChIPEA 
+## 1. Performance of ChIPEA 
 
 1) ```CTD_Chemical_Gene_list.sh``` ```CTD_Genelist_process_for_ChIPEA.sh```
     
@@ -35,7 +32,7 @@ Zhaonan Zou (Department of Drug Discovery Medicine, Kyoto University Graduate Sc
     
     Please refer to Oki, S. et al, EMBO Rep, 2018 or documentation of ChIP-Atlas (https://github.com/inutano/chip-atlas/wiki) for detailed information about primary processing of ChIP-seq data and data annotation.
 
-# 2. Identification of chemical–TF–disease triple associations.
+## 2. Identification of chemical–TF–disease triple associations.
 
    * ```DisGeNET_link.sh```
     Relating the chemical–TF matrix identified using ChIPEA to TF–disease associations.
@@ -46,7 +43,7 @@ Zhaonan Zou (Department of Drug Discovery Medicine, Kyoto University Graduate Sc
         
         If a chemical–disease pair was predicted via multiple TFs, the highest enrichment score was adopted.
 
-# 3. DEG-connected method
+## 3. DEG-connected method
 
    * ```DEG-connected.sh```
     A baseline method for predicting chemical–disease associations.
@@ -61,27 +58,22 @@ Zhaonan Zou (Department of Drug Discovery Medicine, Kyoto University Graduate Sc
 
         The chemical–disease associations were evaluated based on p-values calculated using the two-tailed Fisher’s exact probability test with the null hypothesis that the comparative gene expression patterns in response to a given C (chemical) and D (disease) (n1, n2, n3, and n4) were uniformly distributed. Chemical–disease pairs with smaller p-values were considered to be more firmly associated.
 
-# 4. Validation of predicted results.
+## 4. Validation of predicted results.
 
    * ```chem-tf_AUC.sh``` ```chem-tf-disease_AUC```
     
-    1) Assessment of the correctness of
+   1) Assessment of the correctness of
          a) predicted chemical–TF associations by ChIPEA using known chemical–protein interactions data obtained from KEGG DRUG as standard data.
          b) predicted chemical–disease associations by ChIPEA-based approach as well as the baseline (DEG-connected) method using chemical–disease associations obtained from CTD were used as standard data.
-       
-    2) Performance of ROC and PR curve
+
+   2) Performance of ROC and PR curve
          a) Receiver operating characteristic (ROC) curve: a plot of true-positive rates as a function of false-positive rates;
          b) Precision-recall (PR) curve: a plot of precision (positive predictive value) as a function of recall (sensitivity).
-   
+
          The evaluation was summarized using the area under the ROC curve (AUROC) score, where 1 is perfect classification and 0.5 is random classification, and the area under the PR curve (AUPR) score, where 1 is perfect inference and the ratio of positive examples in the standard data is random inference.
-      
-    
-    3) Calculation of global AUROC and AUPR
+
+   3) Calculation of global AUROC and AUPR
          After 1), all predicted chemical–TF (or disease) associations were first arranged into a single m × n matrix of enrichment scores with correctness information, where m is the total number of chemicals and n is the number of TFs (or diseases). We then stored the maximum value of enrichment scores within each column (TF or disease) into a vector with n elements. We generated ROC and PR curves and summarized the results into global AUROC and AUPR scores as described in the Results section.
 
-
-    
-chem-tf_AUC.sh
-chem-tf-disease_AUC
-Summary_4_TFEA.sh
-Comparison_of_databases.sh
+# Author
+Zhaonan Zou (Department of Drug Discovery Medicine, Kyoto University Graduate School of Medicine, JAPAN)
