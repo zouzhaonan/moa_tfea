@@ -90,10 +90,10 @@ Zhaonan Zou (Department of Drug Discovery Medicine, Kyoto University Graduate Sc
 
 # Reference
 
-Oki S, Ohta T, Shioi G, Hatanaka H, Ogasawara O, Okuda Y, et al. ChIP-Atlas: a data-mining suite powered by full integration of public ChIP-seq data. EMBO Rep. 2018;19. doi:10.15252/embr.201846255.![image](https://user-images.githubusercontent.com/74224230/135555067-9d1425a7-677c-4a11-9f5c-b0120e17258d.png)
+Oki S, Ohta T, Shioi G, Hatanaka H, Ogasawara O, Okuda Y, et al. ChIP-Atlas: a data-mining suite powered by full integration of public ChIP-seq data. EMBO Rep. 2018;19. doi:10.15252/embr.201846255.
 
-Quinlan AR, Hall IM. BEDTools: a flexible suite of utilities for comparing genomic features. Bioinformatics. 2010;26:841–2. doi:10.1093/bioinformatics/btq033.![image](https://user-images.githubusercontent.com/74224230/135555115-a3104881-38aa-4eac-b92b-70e5e1c8f57c.png)
+Quinlan AR, Hall IM. BEDTools: a flexible suite of utilities for comparing genomic features. Bioinformatics. 2010;26:841–2. doi:10.1093/bioinformatics/btq033.
 
-Davis AP, Grondin CJ, Johnson RJ, Sciaky D, McMorran R, Wiegers J, et al. The Comparative Toxicogenomics Database: update 2019. Nucleic Acids Res. 2019;47:D948–54. doi:10.1093/nar/gky868.![image](https://user-images.githubusercontent.com/74224230/135554974-7ed5acf5-8840-4cf6-8be1-47a48eeeab4d.png)
+Davis AP, Grondin CJ, Johnson RJ, Sciaky D, McMorran R, Wiegers J, et al. The Comparative Toxicogenomics Database: update 2019. Nucleic Acids Res. 2019;47:D948–54. doi:10.1093/nar/gky868.
 
-Wang Z, Monteiro CD, Jagodnik KM, Fernandez NF, Gundersen GW, Rouillard AD, et al. Extraction and analysis of signatures from the Gene Expression Omnibus by the crowd. Nat Commun. 2016;7:12846. doi:10.1038/ncomms12846.![image](https://user-images.githubusercontent.com/74224230/135554956-030caab5-4efe-4a7e-96dd-10c2417670cb.png)
+Wang Z, Monteiro CD, Jagodnik KM, Fernandez NF, Gundersen GW, Rouillard AD, et al. Extraction and analysis of signatures from the Gene Expression Omnibus by the crowd. Nat Commun. 2016;7:12846. doi:10.1038/ncomms12846.
