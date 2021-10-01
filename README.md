@@ -45,7 +45,7 @@ Original scripts to elucidate drug modes of action by identifying transcription 
    * ```DisGeNET_link.sh```
     Relating the chemical–TF matrix identified using ChIPEA to TF–disease associations.
     
-        Data about gene/protein–disease associations derived from DisGeNET (formula 1; where P*<sub>m</sub>* and D*<sub>n</sub>* represent a protein and a disease) were related to the chemical–TF associations presented by ChIPEA (formula 2; where *C*<sub>i</sub>*, T*<sub>j</sub>* and E<sub>*ij</sub>* represent a chemical, a TF and an enrichment score) when T*<sub>j</sub>* is also included in DisGeNET as P*<sub>m</sub>* (formula 3). The enrichment scores calculated by ChIPEA were also used to evaluate the probability of each chemical–disease prediction (formula 4). 
+        Data about gene/protein–disease associations derived from DisGeNET (formula 1; where P<sub>*m*</sub> and D<sub>*n*</sub> represent a protein and a disease) were related to the chemical–TF associations presented by ChIPEA (formula 2; where C<sub>*i*</sub>, T<sub>*j*</sub> and E<sub>*ij*</sub> represent a chemical, a TF and an enrichment score) when T<sub>*j*</sub> is also included in DisGeNET as P<sub>*m*</sub> (formula 3). The enrichment scores calculated by ChIPEA were also used to evaluate the probability of each chemical–disease prediction (formula 4). 
         
         ![image](https://user-images.githubusercontent.com/74224230/135550163-1f2f0997-c4a7-4614-94ce-de34206c72ff.png)
         
@@ -56,7 +56,7 @@ Original scripts to elucidate drug modes of action by identifying transcription 
    * ```DEG-connected.sh```
     A baseline method for predicting chemical–disease associations.
     
-        Chemically induced and disease-specific expression changes in 28,268 genes were classified as up-regulated, down-regulated, or non-DEG.
+        Chemically induced (CTD) and disease-specific expression changes (CREEDS; Wang Z. et al., *Nat Commun.*, 2016) in 28,268 genes were classified as up-regulated, down-regulated, or non-DEG.
         
         RefSeq genes were obtained from the UCSC genome annotation database of the human genome (download link, http://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/refFlat.txt.gz; genome, hg19; downloaded on July 7th, 2020).
         
@@ -64,7 +64,7 @@ Original scripts to elucidate drug modes of action by identifying transcription 
 
         ![image](https://user-images.githubusercontent.com/74224230/135549275-09313173-fd47-4216-8b75-8ce9ca69a576.png)
 
-        The chemical–disease associations were evaluated based on p-values calculated using the two-tailed Fisher’s exact probability test with the null hypothesis that the comparative gene expression patterns in response to a given *C* (chemical) and *D* (disease) (*n<sub>1</sub>*, *n<sub>2</sub>*, *n<sub>3</sub>*, and *n<sub>4</sub>*) were uniformly distributed. Chemical–disease pairs with smaller p-values were considered to be more firmly associated.
+        The chemical–disease associations were evaluated based on p-values calculated using the two-tailed Fisher’s exact probability test with the null hypothesis that the comparative gene expression patterns in response to a given *C* (chemical) and *D* (disease) (*n1*, *n2*, *n3*, and *n4*) were uniformly distributed. Chemical–disease pairs with smaller p-values were considered to be more firmly associated.
 
 ## 4. Validation of predicted results.
 
@@ -80,8 +80,20 @@ Original scripts to elucidate drug modes of action by identifying transcription 
 
          The evaluation was summarized using the area under the ROC curve (AUROC) score, where 1 is perfect classification and 0.5 is random classification, and the area under the PR curve (AUPR) score, where 1 is perfect inference and the ratio of positive examples in the standard data is random inference.
 
-   3) Calculation of global AUROC and AUPR
-         After 1), all predicted chemical–TF (or disease) associations were first arranged into a single *m* × *n* matrix of enrichment scores with correctness information, where *m* is the total number of chemicals and *n* is the number of TFs (or diseases). We then stored the maximum value of enrichment scores within each column (TF or disease) into a vector with n elements. We generated ROC and PR curves and summarized the results into global AUROC and AUPR scores as described in the Results section.
+   3) Calculation of "global" AUROC and AUPR
+         a) After 1), all predicted chemical–TF (or disease) associations were first arranged into a single *m* × *n* matrix of enrichment scores with correctness information, where *m* is the total number of chemicals and *n* is the number of TFs (or diseases).
+         b) The maximum value of enrichment scores within each column (TF or disease) was stored into a vector with *n* elements.
+         c) ROC and PR curves were generated and summarized the results into "global" AUROC and AUPR scores.
 
 # Author
 Zhaonan Zou (Department of Drug Discovery Medicine, Kyoto University Graduate School of Medicine, JAPAN)
+
+# Reference
+
+Oki S, Ohta T, Shioi G, Hatanaka H, Ogasawara O, Okuda Y, et al. ChIP-Atlas: a data-mining suite powered by full integration of public ChIP-seq data. EMBO Rep. 2018;19. doi:10.15252/embr.201846255.![image](https://user-images.githubusercontent.com/74224230/135555067-9d1425a7-677c-4a11-9f5c-b0120e17258d.png)
+
+Quinlan AR, Hall IM. BEDTools: a flexible suite of utilities for comparing genomic features. Bioinformatics. 2010;26:841–2. doi:10.1093/bioinformatics/btq033.![image](https://user-images.githubusercontent.com/74224230/135555115-a3104881-38aa-4eac-b92b-70e5e1c8f57c.png)
+
+Davis AP, Grondin CJ, Johnson RJ, Sciaky D, McMorran R, Wiegers J, et al. The Comparative Toxicogenomics Database: update 2019. Nucleic Acids Res. 2019;47:D948–54. doi:10.1093/nar/gky868.![image](https://user-images.githubusercontent.com/74224230/135554974-7ed5acf5-8840-4cf6-8be1-47a48eeeab4d.png)
+
+Wang Z, Monteiro CD, Jagodnik KM, Fernandez NF, Gundersen GW, Rouillard AD, et al. Extraction and analysis of signatures from the Gene Expression Omnibus by the crowd. Nat Commun. 2016;7:12846. doi:10.1038/ncomms12846.![image](https://user-images.githubusercontent.com/74224230/135554956-030caab5-4efe-4a7e-96dd-10c2417670cb.png)
