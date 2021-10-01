@@ -48,7 +48,7 @@ Zhaonan Zou (Department of Drug Discovery Medicine, Kyoto University Graduate Sc
 
 # 3. DEG-connected method
 
-   * ```Gene_pivotal.sh```
+   * ```DEG-connected.sh```
     A baseline method for predicting chemical–disease associations.
     
         Chemically induced and disease-specific expression changes in 28,268 genes were classified as up-regulated, down-regulated, or non-DEG.
